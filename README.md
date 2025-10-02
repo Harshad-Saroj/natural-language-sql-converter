@@ -55,21 +55,6 @@ This API-OLLAMA integration will help to generate documentation for the SQL Stat
 
 
 
-curl -X POST http://127.0.0.1:5000/explain \
-     -H "Content-Type: application/json" \
-     -d '{
-           "type": "SQL",
-           "code": "SELECT customer_id, SUM(total_amount) FROM orders GROUP BY customer_id HAVING SUM(total_amount) > 1000;"
-         }'
 
-  curl -X POST http://127.0.0.1:5000/explain \
-     -H "Content-Type: application/json" \
-     -d '{
-           "type": "ETL",
-           "code": "df = spark.read.csv(\"/mnt/data.csv\"); df_clean = df.dropna(); df_clean.write.parquet(\"/mnt/cleaned\")"
-         }'
-
-
-Note:- I have attached SQL Scripts and few sample queries with this reposiroty for your reference
 
 
